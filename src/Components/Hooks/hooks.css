@@ -1,8 +1,15 @@
 /* UseState */
+.allHooks_Section{
+    padding: 1rem;
+}
 .hooks_ttle{
     font-size: x-large;
     text-align: center;
     margin-top: 2rem;
+}
+.AllHooks_title{
+    text-align: center;
+    font-size: 4rem;
 }
 
 .container{
@@ -61,3 +68,17 @@
     cursor: pointer;
 }
 /* UseState */
+
+/* UseEffect */
+.calculation{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 5rem;
+}
+
+.useEffect_p{
+    text-align: center;
+    font-size: 2rem;
+}
