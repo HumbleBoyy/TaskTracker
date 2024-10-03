@@ -5,9 +5,7 @@ const Main = () => {
   return (
     <>
       <section className='Main'>
-        {/* <Header/> */}
-
-        <UseStateHook/>
+        <Header/>
       </section>
     </>
   )
