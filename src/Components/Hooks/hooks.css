@@ -1,11 +1,19 @@
+/* UseState */
 .hooks_ttle{
     font-size: x-large;
     text-align: center;
     margin-top: 2rem;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
 .btn_hooks{
-    font-size: 2rem;
+    font-size: 1.7rem;
     padding: 10px 30px;
     outline: none;
     border: none;
@@ -13,3 +21,43 @@
     color: aliceblue;
     cursor: pointer;
 }
+.red{
+    background: red;
+}
+.yellow{
+    background: yellow;
+}
+.pink{
+    background: pink;
+}
+.green{
+    background: green;
+}
+.white{
+    background: rgb(255, 253, 250);
+    color: rgb(0, 0, 0);
+    border: 1px solid #d7d7d7;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.names_container{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+.namesBtn{
+    font-size: 1.7rem;
+    padding: 10px 30px;
+    outline: none;
+    border: none;
+    background: blue;
+    color: aliceblue;
+    cursor: pointer;
+}
+/* UseState */
