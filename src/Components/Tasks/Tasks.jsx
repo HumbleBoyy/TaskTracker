@@ -1,29 +1,18 @@
-import React from 'react'
+import Task from "./Task"
 
-const tasks = [
-    {
-        id: 1,
-        text: "Meeting With Partners",
-        day: "Oct 10th at 15:00",
-        reminder:true,
-    },
-    {
-        id: 2,
-        text: "Going to Gym",
-        day: "Oct 5th at 19:00",
-        reminder:true,
-    },
-    {
-        id: 3,
-        text: "Going to Cinema",
-        day: "Oct 11th at 20:00",
-        reminder:false,
-    },
-]
-const Tasks = () => {
+
+
+
+const Tasks = ({tasks}) => {
   return (
     <>
-      
+      {
+         tasks.map((task)=> (
+            <>
+              <Task  key={task.id} task={task}/>
+            </>
+         ))
+      }
     </>
   )
 }
