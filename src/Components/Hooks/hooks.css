@@ -1,0 +1,15 @@
+.hooks_ttle{
+    font-size: x-large;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn_hooks{
+    font-size: 2rem;
+    padding: 10px 30px;
+    outline: none;
+    border: none;
+    background: blue;
+    color: aliceblue;
+    cursor: pointer;
+}

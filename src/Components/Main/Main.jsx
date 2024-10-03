@@ -1,10 +1,13 @@
 import "./main.css"
 import Header from '../Header/Header'
+import UseStateHook from "../Hooks/UseStateHook"
 const Main = () => {
   return (
     <>
       <section className='Main'>
-        <Header/>
+        {/* <Header/> */}
+
+        <UseStateHook/>
       </section>
     </>
   )
