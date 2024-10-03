@@ -1,6 +1,5 @@
 import "./main.css"
 import Header from '../Header/Header'
-import UseStateHook from "../Hooks/UseStateHook"
 import Tasks from "../Tasks/Tasks"
 import { useState } from "react";
 
