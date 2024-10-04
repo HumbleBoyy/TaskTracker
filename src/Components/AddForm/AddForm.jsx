@@ -6,6 +6,7 @@ const AddForm = ({ onAdd }) => {
     const [day, setDay] = useState('')
     const [reminder, setReminder] = useState(false)
 
+    
     const addTasks = (e) => {
         e.preventDefault();
         if(!text || !day){

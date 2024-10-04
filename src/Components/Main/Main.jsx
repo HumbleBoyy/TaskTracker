@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Main = () => {
+  const [showAdd, setShowAdd] = useState(false)
   const [tasks, setTasks] = useState([
   
     {
@@ -32,7 +33,11 @@ const Main = () => {
 
 // Add Task
 const addTask = (task) =>{
-   console.log(task)
+   const id = Math.floor(Math.random() * 1000) + 1
+
+   const newTask = {id, ...task}
+
+   setTasks([...tasks, newTask])
 }
 
 // Delete Task
@@ -48,13 +53,17 @@ const toggleReminder = (id) => {
 }
 
 
+
+
   return (
     <>
       <section className='Main'>
         <ToastContainer className="toast_container" />
-        <Header/>
-        <AddForm onAdd={addTask}/>
+        <Header onAdd={()=> setShowAdd(!showAdd)} showAdd={showAdd}/>
         {
+          showAdd && <AddForm onAdd={addTask}/>
+        }
+         {
           tasks.length !== 0 ?  <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> :
           <div className="Task_bar_red">
             <h2 className="no_task_message">There is no task yet!</h2> 
