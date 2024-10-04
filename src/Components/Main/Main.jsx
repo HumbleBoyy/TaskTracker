@@ -2,6 +2,7 @@ import "./main.css"
 import Header from '../Header/Header'
 import Tasks from "../Tasks/Tasks"
 import { useState } from "react";
+import AddForm from "../AddForm/AddForm";
 
 const Main = () => {
   const [tasks, setTasks] = useState([
@@ -28,17 +29,27 @@ const Main = () => {
 ])
 
 // Delete Task
-
 const deleteTask = (id) => {
    setTasks(tasks.filter((task)=> 
      task.id !== id
    ))
 }
+
+// Toggle reminder
+const toggleReminder = (id) => {
+    setTasks(tasks.map((task)=>  task.id === id ? {...task, reminder: !task.reminder} : task))
+}
   return (
     <>
       <section className='Main'>
         <Header/>
-        <Tasks tasks={tasks} onDelete={deleteTask}/>
+        <AddForm/>
+        {
+          tasks.length !== 0 ?  <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> :
+          <div className="Task_bar_red">
+            <h2 className="no_task_message">There is no task yet!</h2> 
+          </div>
+         }
       </section>
     </>
   )
